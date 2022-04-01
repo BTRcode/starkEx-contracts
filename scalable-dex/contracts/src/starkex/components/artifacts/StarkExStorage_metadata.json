@@ -1,0 +1,104 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "defaultVaultWithdrawalLock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "orderRegistryAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/starkex/components/StarkExStorage.sol": "StarkExStorage"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/components/GovernanceStorage.sol": {
+			"keccak256": "0x05c1eee874dc7af54100fdea4e5e625f9c0a987f2fa93d575816c214335f258e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f82e5aad4b6ffa4b268d967786c99eb520a30d260c257097a8b431df0b430456",
+				"dweb:/ipfs/QmSvPK5ij8CRt1cM1AXaNeStD3ufiQquqqtAUD5utDtEYL"
+			]
+		},
+		"scalable-dex/contracts/src/components/MainStorage.sol": {
+			"keccak256": "0x6e4b8cc16cf7a2d21c5e071615c89112657f98038e2f229e5e94d9686137a967",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://a07a43332b9e70375ecc34bed0f41fc59a69af47c2637d122c7199cc2a0c80ad",
+				"dweb:/ipfs/QmYNjY7BM8bVxxVvUpZaAEcAehtkyRJgoi2oEtE5vqoJSC"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/Common.sol": {
+			"keccak256": "0x048705ce1a855e18f5b2ddbdb860c84fa5d67840f3dcad055d93fd5ac97c57b1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://fee7ddf26266b4ad9fe04086946933ef7fd32fb9351563f007532f7217a5a45c",
+				"dweb:/ipfs/Qmaosx5ioDb2DpzWCYLdh6XhE6rrNwaWCudSd7E7XeH1DK"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/components/StarkExStorage.sol": {
+			"keccak256": "0xe4e9c6872a18c4b69d41c551e0986e06447d14dd4f37de40622f9d372df524ee",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://96d1ee14223218e3d605090c66edca9f558aeef4542267483e6e3f777ae65700",
+				"dweb:/ipfs/Qma1q17haAZkoAXNhjnNeisWCfDGn4BGxHvXTkcQQCmg76"
+			]
+		},
+		"scalable-dex/contracts/src/upgrade/ProxyStorage.sol": {
+			"keccak256": "0xe409a38c188a488384635187e06ca3e565346e39e3db7a864879110073ff0725",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://28126e08e659ca388aa4230707f8558d0d7e9600cf02cad6fcd725f1562a3917",
+				"dweb:/ipfs/Qmd36xSnxFeG6AyQzgvksbTP3gTUw7fegWYVkS8UKLy1Tz"
+			]
+		}
+	},
+	"version": 1
+}

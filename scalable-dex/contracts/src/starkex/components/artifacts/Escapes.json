@@ -1,0 +1,151 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"defaultVaultWithdrawalLock()": "a45d7841",
+			"escape(uint256,uint256,uint256,uint256)": "9e3adac4",
+			"getVaultRoot()": "64da5dfe",
+			"getVaultTreeHeight()": "f288a3ff",
+			"isFrozen()": "33eeb147",
+			"orderRegistryAddress()": "9c6a2837"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"name": "defaultVaultWithdrawalLock",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "starkKey",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "vaultId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "assetId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "quantizedAmount",
+					"type": "uint256"
+				}
+			],
+			"name": "escape",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getVaultRoot",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "root",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getVaultTreeHeight",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "height",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "isFrozen",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "orderRegistryAddress",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

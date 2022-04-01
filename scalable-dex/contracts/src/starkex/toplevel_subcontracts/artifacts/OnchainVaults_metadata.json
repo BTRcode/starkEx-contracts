@@ -1,0 +1,880 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newDefaultLockTime",
+						"type": "uint256"
+					}
+				],
+				"name": "LogDefaultVaultWithdrawalLockSet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "ethKey",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nonQuantizedAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "quantizedAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "LogDepositToVault",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "acceptedGovernor",
+						"type": "address"
+					}
+				],
+				"name": "LogNewGovernorAccepted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "nominatedGovernor",
+						"type": "address"
+					}
+				],
+				"name": "LogNominatedGovernor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "LogNominationCancelled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "removedGovernor",
+						"type": "address"
+					}
+				],
+				"name": "LogRemovedGovernor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "ethKey",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timeRelease",
+						"type": "uint256"
+					}
+				],
+				"name": "LogVaultWithdrawalLockSet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "ethKey",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "nonQuantizedAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "quantizedAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "LogWithdrawalFromVault",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "DEPOSIT_CANCEL_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "FREEZE_GRACE_PERIOD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAIN_GOVERNANCE_INFO_TAG",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_FORCED_ACTIONS_REQS_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_VERIFIER_COUNT",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "STARKEX_MAX_DEFAULT_VAULT_LOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "UNFREEZE_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "VERIFIER_REMOVAL_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "defaultVaultWithdrawalLock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantizedAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositERC20ToVault",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					}
+				],
+				"name": "depositEthToVault",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assetType",
+						"type": "uint256"
+					}
+				],
+				"name": "getAssetInfo",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "assetInfo",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ethKey",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					}
+				],
+				"name": "getQuantizedVaultBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "presumedAssetType",
+						"type": "uint256"
+					}
+				],
+				"name": "getQuantum",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "quantum",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ethKey",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					}
+				],
+				"name": "getVaultBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ethKey",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					}
+				],
+				"name": "getVaultWithdrawalLock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "identify",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initializerSize",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isStrictVaultBalancePolicy",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ethKey",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					}
+				],
+				"name": "isVaultLocked",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lockTime",
+						"type": "uint256"
+					}
+				],
+				"name": "lockVault",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mainAcceptGovernance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mainCancelNomination",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "testGovernor",
+						"type": "address"
+					}
+				],
+				"name": "mainIsGovernor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newGovernor",
+						"type": "address"
+					}
+				],
+				"name": "mainNominateNewGovernor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "governorForRemoval",
+						"type": "address"
+					}
+				],
+				"name": "mainRemoveGovernor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "orderRegistryAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newDefaultTime",
+						"type": "uint256"
+					}
+				],
+				"name": "setDefaultVaultWithdrawalLock",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantizedAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawFromVault",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/starkex/toplevel_subcontracts/OnchainVaults.sol": "OnchainVaults"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/components/Governance.sol": {
+			"keccak256": "0xb4d5fa3231d0a5dd2c59cc9b4ec84d1b682cfae06c1a250938840e302fc65e0c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://59d8d3087f3997129e4bf01b52796bba8121efb3aba312b48996cc6ba30f8f7a",
+				"dweb:/ipfs/QmPJoSeDzcUbdCtS2N2FfRv1sB3jEKpMwV5CwY1odMi92n"
+			]
+		},
+		"scalable-dex/contracts/src/components/GovernanceStorage.sol": {
+			"keccak256": "0x05c1eee874dc7af54100fdea4e5e625f9c0a987f2fa93d575816c214335f258e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f82e5aad4b6ffa4b268d967786c99eb520a30d260c257097a8b431df0b430456",
+				"dweb:/ipfs/QmSvPK5ij8CRt1cM1AXaNeStD3ufiQquqqtAUD5utDtEYL"
+			]
+		},
+		"scalable-dex/contracts/src/components/MainGovernance.sol": {
+			"keccak256": "0x298f8ad8d3579187b870f6ff75cabefd75741df56e95a01e7c897ac66c0a2a2f",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://2eaa0f2d08ea08c5c41a20f7ffcd58f23b312f829c22ddad152f0cc460226d57",
+				"dweb:/ipfs/QmeTm3RLoMeMibrtKF7oTxHaTZ8becMwec8pYPDBaNmdWh"
+			]
+		},
+		"scalable-dex/contracts/src/components/MainStorage.sol": {
+			"keccak256": "0x6e4b8cc16cf7a2d21c5e071615c89112657f98038e2f229e5e94d9686137a967",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://a07a43332b9e70375ecc34bed0f41fc59a69af47c2637d122c7199cc2a0c80ad",
+				"dweb:/ipfs/QmYNjY7BM8bVxxVvUpZaAEcAehtkyRJgoi2oEtE5vqoJSC"
+			]
+		},
+		"scalable-dex/contracts/src/components/TokenTransfers.sol": {
+			"keccak256": "0xb31a47ab9c8891a1048c6f08ee8677d1368d999f8a120df7a8948d7bb6231eb8",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://bc81ef6b1ea3155541e4bf8db5f4a60dc5e6151d927b183e6cf10f295b7bbdeb",
+				"dweb:/ipfs/QmTGsDNeFeQUBitKGmhnXDg9AFgYppNVrWnLd2SSTDm89p"
+			]
+		},
+		"scalable-dex/contracts/src/interactions/TokenAssetData.sol": {
+			"keccak256": "0x55c53e0426dc90dc8ad995163bcd6f1d140868099e7c3f9d80851caa90787218",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://07bd27129872c3797feeaca8917ec3e2a596f0e53fa862887348491dac0415a6",
+				"dweb:/ipfs/QmQ6kQW4wfCwLVcctZ57XJ1sS7JpX8wyNRfvHBxKdmCp8z"
+			]
+		},
+		"scalable-dex/contracts/src/interactions/TokenQuantization.sol": {
+			"keccak256": "0x033af5c63a30ea3b9a00c047117a549dcef1931a8c139d79ac91327063f53f16",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f465045d5981f8aa06fa5153bec9762ebfe0f189dcf6ae1ba613c3acf98625c5",
+				"dweb:/ipfs/QmSEJ3dLzVbLatQNyAdjxucuqhi98LXgBjEChGL1CXeEzM"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/Identity.sol": {
+			"keccak256": "0x747d76dfbfd25c7dee2c9649e137f79bdf1fa2a2891c74921e15b106c34b5a9c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://69521961bc7245ba845d13808268846ac8efa2f2d231ca59c8e56ee7d0f617ac",
+				"dweb:/ipfs/QmUjEc8hQQmwvQSRtL7pZ7JgtiY5Y5Pb2yJSt2dNEpVKc3"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MGovernance.sol": {
+			"keccak256": "0x1f20cdbbc14e2468b5968e1f873aa2d011da705f134c3295027b8ad4c753805c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://3d57be2457a66e33cf01594c6d355536dfaf465e14381907359ddf873a61c53c",
+				"dweb:/ipfs/Qma6yjUgn9Apu5v9fRah4N12QYBd9nFPYM9RPesaF94Fza"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MTokenAssetData.sol": {
+			"keccak256": "0xc413d230a21b688920eae006c2bb5c4db35ef9e50b082c45ec9e4168d747854d",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://bf58eaff8e056db8bef0b1db70794274d6a84b57bae061c131772d368c8f1218",
+				"dweb:/ipfs/QmXTbXeL5q2C6Mx3P4W45x5TzKuE4TFcNnmHCJmPrfN1cW"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MTokenQuantization.sol": {
+			"keccak256": "0x07e14188114d4814e524ab257171406fea0cfefea6ca1cef1b72d344e661994d",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f6511fb3bde75f9277bbb5138d44cf08f47c73ad10529dd718463ef3f8d65f9d",
+				"dweb:/ipfs/QmfXJrqPRrx87z5cLkADiui1MmUgf5Y1uGG4MC4WjhaYkb"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MTokenTransfers.sol": {
+			"keccak256": "0x6b5917a8b21353d9d7d95311177e1cabb481099fd34a7f315bfa30708452a5ad",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://97c978c8f6dbb2a393d15b946ff4afa2947bbf8b3ff73e214a7aff9a4524b54e",
+				"dweb:/ipfs/QmPwYpaN8jfUS6FbkxKEVPT87jfgDjFoLybUfBRKtvJh9k"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/SubContractor.sol": {
+			"keccak256": "0x9a10c4d9c44a1138d12b06493b1d0e35c6a00f9385a0699e3801cf3e2a03029c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ce87e16ca6f57a4fde9c8c47a074c3ac3dc93427831d066f1cbb572e94527b74",
+				"dweb:/ipfs/Qmck6fETkLCRneQ3XbMDHp6RwrSSKAkX8vtjrLs2jS8k21"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/Common.sol": {
+			"keccak256": "0x048705ce1a855e18f5b2ddbdb860c84fa5d67840f3dcad055d93fd5ac97c57b1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://fee7ddf26266b4ad9fe04086946933ef7fd32fb9351563f007532f7217a5a45c",
+				"dweb:/ipfs/Qmaosx5ioDb2DpzWCYLdh6XhE6rrNwaWCudSd7E7XeH1DK"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/LibConstants.sol": {
+			"keccak256": "0x8bc90311d918be6e9e0440a0c9861e43abe5ff07de15aa57bba97e486dc1d18c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ab4a32633b04b94bc4a43c2f04d79d6785d709ecee05d082398b1328c4b50ea4",
+				"dweb:/ipfs/QmQbPYoVBRAVaA7CRU7mY5a7iMFb61EShxTYRR2RCUCFUK"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/StarkExConstants.sol": {
+			"keccak256": "0xddd18e94cbb7b3db461c87f8a697a9060f4b87224840633ceb107a02fa4dfe63",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://8075f37ed94e88cfc005bbab3f563833c4f158e995b9ca51542430b3f5acc4d5",
+				"dweb:/ipfs/QmZj4qdrneSXEv24yDNwNVwveehhV8xoEHjSuMw6isbnMM"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/components/StarkExStorage.sol": {
+			"keccak256": "0xe4e9c6872a18c4b69d41c551e0986e06447d14dd4f37de40622f9d372df524ee",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://96d1ee14223218e3d605090c66edca9f558aeef4542267483e6e3f777ae65700",
+				"dweb:/ipfs/Qma1q17haAZkoAXNhjnNeisWCfDGn4BGxHvXTkcQQCmg76"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/components/VaultDepositWithdrawal.sol": {
+			"keccak256": "0x2e671209cb5d9a93cbd8dff256e7738169dfd17dca5e677812f953d5c58aff78",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://517e189c9ed691dd7212f9fc47ab42ecf7997d559ed6ed447fea0f6e92cc6deb",
+				"dweb:/ipfs/QmcoPXufdeWLUSRwuHz2jQVUHnt69zCo3haUBGJBzxn4CV"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/components/VaultLocks.sol": {
+			"keccak256": "0x2236c3c5f1aa477dd3aeb9d5aac72c0c0137c1590aa17af40f0ff1f1a538c932",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://5c46e788ac099bcf8347f7394773478bd9101500a5adab9a7cdc0adcfccf66df",
+				"dweb:/ipfs/QmS6v1Zk68RtpBRKK4Nkj7JsZ6nErFtCvyoBphJnJcCixV"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/interfaces/MVaultLocks.sol": {
+			"keccak256": "0xafd334bcf0ba06ec165a4d9d5b27434897476bb08c6938df0f3e5849d37a865b",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://3eab94709f1bae6075ab695a78ff53330a26ca62b1ad055f91240689d45adbfa",
+				"dweb:/ipfs/QmQ81qAsPs82T4RNjjAvkLKiK7hPovYBFZPZ6r1WcijPUV"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/toplevel_subcontracts/OnchainVaults.sol": {
+			"keccak256": "0xcffa0567286891d3f0cc551552fa5983dd54eafaa23647b6ae05e5f70555e7c1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://51136b5b0b1871ac51df4ba43192cad558a3e24f0c4c9762807a6be8d10ae5df",
+				"dweb:/ipfs/QmcpFpuGw1Rgiha7gci2zxhqHjyw4AzyABa6VkYQ6N6Rf5"
+			]
+		},
+		"scalable-dex/contracts/src/tokens/ERC20/IERC20.sol": {
+			"keccak256": "0x1647d2002b2d8b602c2eae0576575c95cbdc0edd830e7d2cb49fd88978731ec3",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://c32d31cfe41ea078ebbb2624e1e3ebd9d4ec8ecae163eed7873213ecd65ef60c",
+				"dweb:/ipfs/QmPa7YKVMbgYtvzU7Up2dsok1X3yR7QdiR2YRc2Mdk69GU"
+			]
+		},
+		"scalable-dex/contracts/src/upgrade/ProxyStorage.sol": {
+			"keccak256": "0xe409a38c188a488384635187e06ca3e565346e39e3db7a864879110073ff0725",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://28126e08e659ca388aa4230707f8558d0d7e9600cf02cad6fcd725f1562a3917",
+				"dweb:/ipfs/Qmd36xSnxFeG6AyQzgvksbTP3gTUw7fegWYVkS8UKLy1Tz"
+			]
+		}
+	},
+	"version": 1
+}

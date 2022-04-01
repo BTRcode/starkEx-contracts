@@ -1,0 +1,196 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "DEPOSIT_CANCEL_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "FREEZE_GRACE_PERIOD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_FORCED_ACTIONS_REQS_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_VERIFIER_COUNT",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "UNFREEZE_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "VERIFIER_REMOVAL_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getActionCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "actionIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "getActionHashByIndex",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/components/ActionHash.sol": "ActionHash"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/components/ActionHash.sol": {
+			"keccak256": "0xbdb3e443238e869edcd1f66930c79f6b6f37af49f5d18d384d474009eb998d48",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f71b054b7592c699ce82e8e304e41296ddd95850793fd57f3c5cc3201f5b3062",
+				"dweb:/ipfs/QmW93Ez9Xn6d9VZCGXwoEagCyYpv1uiVCyfa8DExftGtb1"
+			]
+		},
+		"scalable-dex/contracts/src/components/GovernanceStorage.sol": {
+			"keccak256": "0x05c1eee874dc7af54100fdea4e5e625f9c0a987f2fa93d575816c214335f258e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f82e5aad4b6ffa4b268d967786c99eb520a30d260c257097a8b431df0b430456",
+				"dweb:/ipfs/QmSvPK5ij8CRt1cM1AXaNeStD3ufiQquqqtAUD5utDtEYL"
+			]
+		},
+		"scalable-dex/contracts/src/components/MainStorage.sol": {
+			"keccak256": "0x6e4b8cc16cf7a2d21c5e071615c89112657f98038e2f229e5e94d9686137a967",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://a07a43332b9e70375ecc34bed0f41fc59a69af47c2637d122c7199cc2a0c80ad",
+				"dweb:/ipfs/QmYNjY7BM8bVxxVvUpZaAEcAehtkyRJgoi2oEtE5vqoJSC"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/Common.sol": {
+			"keccak256": "0x048705ce1a855e18f5b2ddbdb860c84fa5d67840f3dcad055d93fd5ac97c57b1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://fee7ddf26266b4ad9fe04086946933ef7fd32fb9351563f007532f7217a5a45c",
+				"dweb:/ipfs/Qmaosx5ioDb2DpzWCYLdh6XhE6rrNwaWCudSd7E7XeH1DK"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/LibConstants.sol": {
+			"keccak256": "0x8bc90311d918be6e9e0440a0c9861e43abe5ff07de15aa57bba97e486dc1d18c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ab4a32633b04b94bc4a43c2f04d79d6785d709ecee05d082398b1328c4b50ea4",
+				"dweb:/ipfs/QmQbPYoVBRAVaA7CRU7mY5a7iMFb61EShxTYRR2RCUCFUK"
+			]
+		},
+		"scalable-dex/contracts/src/upgrade/ProxyStorage.sol": {
+			"keccak256": "0xe409a38c188a488384635187e06ca3e565346e39e3db7a864879110073ff0725",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://28126e08e659ca388aa4230707f8558d0d7e9600cf02cad6fcd725f1562a3917",
+				"dweb:/ipfs/Qmd36xSnxFeG6AyQzgvksbTP3gTUw7fegWYVkS8UKLy1Tz"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,50 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "nonpayable",
+				"type": "fallback"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/components/EcTableContract.sol": "EcTableContract"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/components/EcTableContract.sol": {
+			"keccak256": "0x2067543cc6a98ee6e9945a46fd540ed0d2a548f24b5c53485ff1ad5bfa189c4e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://373ccc3dabe54b8a6290159037d81dd106af0038a43dd1f2b9593a2eb93e0fba",
+				"dweb:/ipfs/QmQTkBoY7xB7YJgSfeV3N5aoyzAhugtJ75BRAV3W7effpQ"
+			]
+		}
+	},
+	"version": 1
+}

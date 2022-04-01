@@ -1,0 +1,145 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "DEPOSIT_CANCEL_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "FREEZE_GRACE_PERIOD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_FORCED_ACTIONS_REQS_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_VERIFIER_COUNT",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "STARKEX_MAX_DEFAULT_VAULT_LOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "UNFREEZE_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "VERIFIER_REMOVAL_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/starkex/StarkExConstants.sol": "StarkExConstants"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/libraries/LibConstants.sol": {
+			"keccak256": "0x8bc90311d918be6e9e0440a0c9861e43abe5ff07de15aa57bba97e486dc1d18c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ab4a32633b04b94bc4a43c2f04d79d6785d709ecee05d082398b1328c4b50ea4",
+				"dweb:/ipfs/QmQbPYoVBRAVaA7CRU7mY5a7iMFb61EShxTYRR2RCUCFUK"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/StarkExConstants.sol": {
+			"keccak256": "0xddd18e94cbb7b3db461c87f8a697a9060f4b87224840633ceb107a02fa4dfe63",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://8075f37ed94e88cfc005bbab3f563833c4f158e995b9ca51542430b3f5acc4d5",
+				"dweb:/ipfs/QmZj4qdrneSXEv24yDNwNVwveehhV8xoEHjSuMw6isbnMM"
+			]
+		}
+	},
+	"version": 1
+}

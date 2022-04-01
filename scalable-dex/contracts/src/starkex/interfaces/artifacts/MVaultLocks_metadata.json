@@ -1,0 +1,75 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ethKey",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					}
+				],
+				"name": "isVaultLocked",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/starkex/interfaces/MVaultLocks.sol": "MVaultLocks"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/starkex/interfaces/MVaultLocks.sol": {
+			"keccak256": "0xafd334bcf0ba06ec165a4d9d5b27434897476bb08c6938df0f3e5849d37a865b",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://3eab94709f1bae6075ab695a78ff53330a26ca62b1ad055f91240689d45adbfa",
+				"dweb:/ipfs/QmQ81qAsPs82T4RNjjAvkLKiK7hPovYBFZPZ6r1WcijPUV"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,665 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "LogFrozen",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "acceptedGovernor",
+						"type": "address"
+					}
+				],
+				"name": "LogNewGovernorAccepted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "nominatedGovernor",
+						"type": "address"
+					}
+				],
+				"name": "LogNominatedGovernor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "LogNominationCancelled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "entry",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "entryId",
+						"type": "string"
+					}
+				],
+				"name": "LogRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "entry",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "entryId",
+						"type": "string"
+					}
+				],
+				"name": "LogRemovalIntent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "entry",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "entryId",
+						"type": "string"
+					}
+				],
+				"name": "LogRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "removedGovernor",
+						"type": "address"
+					}
+				],
+				"name": "LogRemovedGovernor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "LogUnFrozen",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "DEPOSIT_CANCEL_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "FREEZE_GRACE_PERIOD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAIN_GOVERNANCE_INFO_TAG",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_FORCED_ACTIONS_REQS_PER_BLOCK",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_VERIFIER_COUNT",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "UNFREEZE_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "VERIFIER_REMOVAL_DELAY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "verifier",
+						"type": "address"
+					}
+				],
+				"name": "announceAvailabilityVerifierRemovalIntent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "verifier",
+						"type": "address"
+					}
+				],
+				"name": "announceVerifierRemovalIntent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRegisteredAvailabilityVerifiers",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "_verifers",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRegisteredVerifiers",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "_verifers",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "identify",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initializerSize",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "verifierAddress",
+						"type": "address"
+					}
+				],
+				"name": "isAvailabilityVerifier",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isFrozen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "verifierAddress",
+						"type": "address"
+					}
+				],
+				"name": "isVerifier",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mainAcceptGovernance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "mainCancelNomination",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "testGovernor",
+						"type": "address"
+					}
+				],
+				"name": "mainIsGovernor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newGovernor",
+						"type": "address"
+					}
+				],
+				"name": "mainNominateNewGovernor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "governorForRemoval",
+						"type": "address"
+					}
+				],
+				"name": "mainRemoveGovernor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "verifier",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "identifier",
+						"type": "string"
+					}
+				],
+				"name": "registerAvailabilityVerifier",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "verifier",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "identifier",
+						"type": "string"
+					}
+				],
+				"name": "registerVerifier",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "verifier",
+						"type": "address"
+					}
+				],
+				"name": "removeAvailabilityVerifier",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "verifier",
+						"type": "address"
+					}
+				],
+				"name": "removeVerifier",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unFreeze",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/toplevel_subcontracts/AllVerifiers.sol": "AllVerifiers"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/components/ApprovalChain.sol": {
+			"keccak256": "0x12044a7ac46cdab9df9b06f14e65812868f0cec0b793558e0521ae8e01efae96",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://a1f8a3d974675ea07fad56b45c2f8c5dcc7f94db4dd031b02105fd542dac0436",
+				"dweb:/ipfs/QmTWBxwA9akdvvAbXFqQVdfe6DaX94p7xNQVfJUqecUd1C"
+			]
+		},
+		"scalable-dex/contracts/src/components/AvailabilityVerifiers.sol": {
+			"keccak256": "0x15c912f0b1909d38b3e14f129bd252c11dceadd7686c90cd76657911c0e856e5",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ed8b96680ec2cfe6b419f0b7ea4cc430caf5d269aa6a9dffc938af2a4dfa8a73",
+				"dweb:/ipfs/Qmc6uHfnAtg6VDn4hwdGeMQSpfMnYbfmMuRSGi781uKf13"
+			]
+		},
+		"scalable-dex/contracts/src/components/Freezable.sol": {
+			"keccak256": "0x33c9b4f82083eec1214141b923f1113093227234370bc32beba739e48d13ac62",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://5b7aacd8af7d9761d1a4f65a6cbd6ddacb42bd1318c49a271a4360d85f102dc3",
+				"dweb:/ipfs/QmbzZn9FqhixUSp1EHkJc5TWpsUf7D55eSxw5fZKfFU2nC"
+			]
+		},
+		"scalable-dex/contracts/src/components/Governance.sol": {
+			"keccak256": "0xb4d5fa3231d0a5dd2c59cc9b4ec84d1b682cfae06c1a250938840e302fc65e0c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://59d8d3087f3997129e4bf01b52796bba8121efb3aba312b48996cc6ba30f8f7a",
+				"dweb:/ipfs/QmPJoSeDzcUbdCtS2N2FfRv1sB3jEKpMwV5CwY1odMi92n"
+			]
+		},
+		"scalable-dex/contracts/src/components/GovernanceStorage.sol": {
+			"keccak256": "0x05c1eee874dc7af54100fdea4e5e625f9c0a987f2fa93d575816c214335f258e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f82e5aad4b6ffa4b268d967786c99eb520a30d260c257097a8b431df0b430456",
+				"dweb:/ipfs/QmSvPK5ij8CRt1cM1AXaNeStD3ufiQquqqtAUD5utDtEYL"
+			]
+		},
+		"scalable-dex/contracts/src/components/MainGovernance.sol": {
+			"keccak256": "0x298f8ad8d3579187b870f6ff75cabefd75741df56e95a01e7c897ac66c0a2a2f",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://2eaa0f2d08ea08c5c41a20f7ffcd58f23b312f829c22ddad152f0cc460226d57",
+				"dweb:/ipfs/QmeTm3RLoMeMibrtKF7oTxHaTZ8becMwec8pYPDBaNmdWh"
+			]
+		},
+		"scalable-dex/contracts/src/components/MainStorage.sol": {
+			"keccak256": "0x6e4b8cc16cf7a2d21c5e071615c89112657f98038e2f229e5e94d9686137a967",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://a07a43332b9e70375ecc34bed0f41fc59a69af47c2637d122c7199cc2a0c80ad",
+				"dweb:/ipfs/QmYNjY7BM8bVxxVvUpZaAEcAehtkyRJgoi2oEtE5vqoJSC"
+			]
+		},
+		"scalable-dex/contracts/src/components/Verifiers.sol": {
+			"keccak256": "0xf30420e6c0a09d38e9a2a2d04284e2d11b1778d198a6391966aef5597770f2b9",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://c907990369dcb285102da8442198c5f8ff75b198044751d1b61e2931ea15452e",
+				"dweb:/ipfs/QmPUCTQsp4V7MwcUQerDu3tpn52T7EU7sy4J1MtK92jMpp"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/IFactRegistry.sol": {
+			"keccak256": "0x960d268946494b327e3f55df63312e7bca1cb4d0bfc1dc081fe76a4d8a0794ba",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://96f5dc86619214885f0379ef21632f2968081a6ae62eea21ab90dbbc1772f25f",
+				"dweb:/ipfs/QmU1du1sBgMNbv2o2XKXTuNucTSzTq9TbM2D8amcMmhfRw"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/IQueryableFactRegistry.sol": {
+			"keccak256": "0x759aaa3a4d7b2cb286bf3ca4f6d9f01b3a2c076878f72811d6f306eb1ac4c350",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://457f2b2f01443f6f7599ab4b201948fcfc3af9e074c68a519fa775085084cb01",
+				"dweb:/ipfs/QmS647qHmBpYMNRpPQjVCEEwCP7RoAxXmUtWDeURDEnmdX"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/Identity.sol": {
+			"keccak256": "0x747d76dfbfd25c7dee2c9649e137f79bdf1fa2a2891c74921e15b106c34b5a9c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://69521961bc7245ba845d13808268846ac8efa2f2d231ca59c8e56ee7d0f617ac",
+				"dweb:/ipfs/QmUjEc8hQQmwvQSRtL7pZ7JgtiY5Y5Pb2yJSt2dNEpVKc3"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MApprovalChain.sol": {
+			"keccak256": "0x10e01fd64ba4e7e5466405014997e34614b752d0e2b330621b0685c456384afd",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://702a258c9f7dc72974435aa0be13eca480db4f934a44ddddcbf9ad4e6bcaae74",
+				"dweb:/ipfs/QmSyzpkMVMHDcYdfq5RhkQzHuEcENRnntxZBe2xk69LG7T"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MFreezable.sol": {
+			"keccak256": "0xeaf629fe09feeaa3860acdfe848609534b9062c219bc6cef3d6ff63a18a592e1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://2efca824bfecee9c1c5763afe9892d39efdbe6d25716f934edf34fb4ac0c8f53",
+				"dweb:/ipfs/QmVRABFEnSSqRyED8CAbULKBtob1X5XgXwedTtbyHM1f6y"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MGovernance.sol": {
+			"keccak256": "0x1f20cdbbc14e2468b5968e1f873aa2d011da705f134c3295027b8ad4c753805c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://3d57be2457a66e33cf01594c6d355536dfaf465e14381907359ddf873a61c53c",
+				"dweb:/ipfs/Qma6yjUgn9Apu5v9fRah4N12QYBd9nFPYM9RPesaF94Fza"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/SubContractor.sol": {
+			"keccak256": "0x9a10c4d9c44a1138d12b06493b1d0e35c6a00f9385a0699e3801cf3e2a03029c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ce87e16ca6f57a4fde9c8c47a074c3ac3dc93427831d066f1cbb572e94527b74",
+				"dweb:/ipfs/Qmck6fETkLCRneQ3XbMDHp6RwrSSKAkX8vtjrLs2jS8k21"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/Common.sol": {
+			"keccak256": "0x048705ce1a855e18f5b2ddbdb860c84fa5d67840f3dcad055d93fd5ac97c57b1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://fee7ddf26266b4ad9fe04086946933ef7fd32fb9351563f007532f7217a5a45c",
+				"dweb:/ipfs/Qmaosx5ioDb2DpzWCYLdh6XhE6rrNwaWCudSd7E7XeH1DK"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/LibConstants.sol": {
+			"keccak256": "0x8bc90311d918be6e9e0440a0c9861e43abe5ff07de15aa57bba97e486dc1d18c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ab4a32633b04b94bc4a43c2f04d79d6785d709ecee05d082398b1328c4b50ea4",
+				"dweb:/ipfs/QmQbPYoVBRAVaA7CRU7mY5a7iMFb61EShxTYRR2RCUCFUK"
+			]
+		},
+		"scalable-dex/contracts/src/toplevel_subcontracts/AllVerifiers.sol": {
+			"keccak256": "0xd8b5130e4ca75e093f04d3c511f06787764740e1d79e6eecea6c7c44a4a47679",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://6047146e3a9e91d002f9e5e5ffc3ee54d88c27e992ed13b3f8c40270cd4f9649",
+				"dweb:/ipfs/QmZC5nv8T6pu8gLeUV4B4jP4GWgvbzZdzZ5c3k31niuChf"
+			]
+		},
+		"scalable-dex/contracts/src/upgrade/ProxyStorage.sol": {
+			"keccak256": "0xe409a38c188a488384635187e06ca3e565346e39e3db7a864879110073ff0725",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://28126e08e659ca388aa4230707f8558d0d7e9600cf02cad6fcd725f1562a3917",
+				"dweb:/ipfs/Qmd36xSnxFeG6AyQzgvksbTP3gTUw7fegWYVkS8UKLy1Tz"
+			]
+		}
+	},
+	"version": 1
+}

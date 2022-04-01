@@ -1,0 +1,160 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "VERSION",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/starkex/StarkExchange.sol": "StarkExchange"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/components/GovernanceStorage.sol": {
+			"keccak256": "0x05c1eee874dc7af54100fdea4e5e625f9c0a987f2fa93d575816c214335f258e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f82e5aad4b6ffa4b268d967786c99eb520a30d260c257097a8b431df0b430456",
+				"dweb:/ipfs/QmSvPK5ij8CRt1cM1AXaNeStD3ufiQquqqtAUD5utDtEYL"
+			]
+		},
+		"scalable-dex/contracts/src/components/MainStorage.sol": {
+			"keccak256": "0x6e4b8cc16cf7a2d21c5e071615c89112657f98038e2f229e5e94d9686137a967",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://a07a43332b9e70375ecc34bed0f41fc59a69af47c2637d122c7199cc2a0c80ad",
+				"dweb:/ipfs/QmYNjY7BM8bVxxVvUpZaAEcAehtkyRJgoi2oEtE5vqoJSC"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/BlockDirectCall.sol": {
+			"keccak256": "0xe0bd5409b9150920a16d367e6fd8e92758de83aef6218ab304eea53dfcfca31a",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://d3c18400990fd0bf218e85cb12322be665d9d070b899d1227de60b2c1e9b1f80",
+				"dweb:/ipfs/QmXxDqwLKjzrTTKKvbcVMHhu5n7LVrjbHh9NEebAEANwFu"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/IDispatcherBase.sol": {
+			"keccak256": "0x39361011d14b0befc6abacef85c7f4d227908289df6ec0e063a75c23b717c8ff",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://aebef4944289bf604d67433336ee078227a2b76c904a338ddced97dc76c854ff",
+				"dweb:/ipfs/Qmc69TC6kBC6oiqE5KwKtkM75jVuLNT62X1Rw8MmcFrbXk"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/Identity.sol": {
+			"keccak256": "0x747d76dfbfd25c7dee2c9649e137f79bdf1fa2a2891c74921e15b106c34b5a9c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://69521961bc7245ba845d13808268846ac8efa2f2d231ca59c8e56ee7d0f617ac",
+				"dweb:/ipfs/QmUjEc8hQQmwvQSRtL7pZ7JgtiY5Y5Pb2yJSt2dNEpVKc3"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MainDispatcher.sol": {
+			"keccak256": "0xc6b708387bef03e366ea43f25de072fce7e2d95aa862ba616620ea578272b5f0",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://0d3f49261f8fdd529ecb723a0f673d7339779a445d5af70c542c42478797ec27",
+				"dweb:/ipfs/QmRo1JDqacXeWk6oqNyqCJn2nUigeydnEoQfv5nzRiSyoG"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MainDispatcherBase.sol": {
+			"keccak256": "0x08684b172ce61000108158d26c688f38092a68aa36b0c086a2a4b8bad24001c3",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://dc335222a8d5e2cea3a73ecfdb44b7b2ea2a1d4279e7948c8d67919cfb3a8197",
+				"dweb:/ipfs/QmZfkxrcRSS78uBNJ72eVeTqWDTpiyAhAWCSCv3dTgHSyW"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/SubContractor.sol": {
+			"keccak256": "0x9a10c4d9c44a1138d12b06493b1d0e35c6a00f9385a0699e3801cf3e2a03029c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ce87e16ca6f57a4fde9c8c47a074c3ac3dc93427831d066f1cbb572e94527b74",
+				"dweb:/ipfs/Qmck6fETkLCRneQ3XbMDHp6RwrSSKAkX8vtjrLs2jS8k21"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/Common.sol": {
+			"keccak256": "0x048705ce1a855e18f5b2ddbdb860c84fa5d67840f3dcad055d93fd5ac97c57b1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://fee7ddf26266b4ad9fe04086946933ef7fd32fb9351563f007532f7217a5a45c",
+				"dweb:/ipfs/Qmaosx5ioDb2DpzWCYLdh6XhE6rrNwaWCudSd7E7XeH1DK"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/StarkExchange.sol": {
+			"keccak256": "0x1148aaeeb0ef9fd6870cafb3fb86a405e1deeba82f08b5e5b53a60406c0ff983",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://568faefbf06007f95280fb9d183875f3d757d0714d9fadcc6d7824cc016513d5",
+				"dweb:/ipfs/Qmdfaj9rYLjZFQvL2BXPhfssmBKs9gE927UvG68A67NvcP"
+			]
+		},
+		"scalable-dex/contracts/src/upgrade/ProxyStorage.sol": {
+			"keccak256": "0xe409a38c188a488384635187e06ca3e565346e39e3db7a864879110073ff0725",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://28126e08e659ca388aa4230707f8558d0d7e9600cf02cad6fcd725f1562a3917",
+				"dweb:/ipfs/Qmd36xSnxFeG6AyQzgvksbTP3gTUw7fegWYVkS8UKLy1Tz"
+			]
+		}
+	},
+	"version": 1
+}

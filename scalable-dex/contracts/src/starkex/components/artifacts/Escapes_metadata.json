@@ -1,0 +1,220 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "defaultVaultWithdrawalLock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "starkKey",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vaultId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "assetId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantizedAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "escape",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVaultRoot",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "root",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVaultTreeHeight",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "height",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isFrozen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "orderRegistryAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Escaping the exchange is the last resort for users that wish to withdraw their funds without relying on off-chain exchange services. The Escape functionality may only be invoked once the contract has become frozen. This will be as the result of an unserviced full withdraw request (see :sol:mod:`FullWithdrawals`). At that point, any escaper entity may perform an escape operation as follows: 1. Escapers must obtain a Merkle path of a vault to be evicted with respect to the frozen vault tree root. Typically, once the exchange is frozen, such data will be made public or would be obtainable from an exchange API, depending on the data availability approach used by the exchange. 2. Escapers call the :sol:mod:`EscapeVerifier` contract with the Merkle proof for the vault to be evicted. If the proof is valid, this results in the registration of such proof. 3. Escapers call :sol:func:`escape` function with the same parameters as submitted to the :sol:mod:`EscapeVerifier` (i.e. the vault ID, Stark Key of the vault owner, the asset ID and the vault balance), sans the Merkle proof. If a proof was accepted for the same parameters by the :sol:mod:`EscapeVerifier`, and no prior escape call was made for the vault, the contract adds the vault balance to an on-chain pending withdrawals account under the Stark Key of the vault owner and the appropriate asset ID. 4. The owner of the vault may then withdraw this amount from the pending withdrawals account by calling the normal withdraw function (see :sol:mod:`Withdrawals`) to transfer the funds to the users Eth or ERC20 account (depending on the token type). Note that while anyone can perform the initial steps of the escape operation (including the exchange operator, for example), only the owner of the vault may perform the final step of transferring the funds.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"scalable-dex/contracts/src/starkex/components/Escapes.sol": "Escapes"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"scalable-dex/contracts/src/components/GovernanceStorage.sol": {
+			"keccak256": "0x05c1eee874dc7af54100fdea4e5e625f9c0a987f2fa93d575816c214335f258e",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://f82e5aad4b6ffa4b268d967786c99eb520a30d260c257097a8b431df0b430456",
+				"dweb:/ipfs/QmSvPK5ij8CRt1cM1AXaNeStD3ufiQquqqtAUD5utDtEYL"
+			]
+		},
+		"scalable-dex/contracts/src/components/MainStorage.sol": {
+			"keccak256": "0x6e4b8cc16cf7a2d21c5e071615c89112657f98038e2f229e5e94d9686137a967",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://a07a43332b9e70375ecc34bed0f41fc59a69af47c2637d122c7199cc2a0c80ad",
+				"dweb:/ipfs/QmYNjY7BM8bVxxVvUpZaAEcAehtkyRJgoi2oEtE5vqoJSC"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/IFactRegistry.sol": {
+			"keccak256": "0x960d268946494b327e3f55df63312e7bca1cb4d0bfc1dc081fe76a4d8a0794ba",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://96f5dc86619214885f0379ef21632f2968081a6ae62eea21ab90dbbc1772f25f",
+				"dweb:/ipfs/QmU1du1sBgMNbv2o2XKXTuNucTSzTq9TbM2D8amcMmhfRw"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MAcceptModifications.sol": {
+			"keccak256": "0xfed06a36676581b9b01dba6709195afaa14c65f439f3bcfa331d65840190e393",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://97032ea4bbb2ebbf7a52d883f7d73e41be617466516a0618485a87e93e2d3f58",
+				"dweb:/ipfs/QmReZEmsroPS3qhMSscms3bWEWfJZ4zLkP2qSybyaG6hoi"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MFreezable.sol": {
+			"keccak256": "0xeaf629fe09feeaa3860acdfe848609534b9062c219bc6cef3d6ff63a18a592e1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://2efca824bfecee9c1c5763afe9892d39efdbe6d25716f934edf34fb4ac0c8f53",
+				"dweb:/ipfs/QmVRABFEnSSqRyED8CAbULKBtob1X5XgXwedTtbyHM1f6y"
+			]
+		},
+		"scalable-dex/contracts/src/interfaces/MStateRoot.sol": {
+			"keccak256": "0x7be4b07f6e0500f90e99c2f122dd532e6e3b5cb537cbee42aeab5251f8278e7f",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://fa6218c212951272e8831d63dea71ebe58745f293eed7b23135228bca90dbab0",
+				"dweb:/ipfs/QmeusZTwtt6WA5PDmksYJnCeV4prW7joJa8CrgcWontQHK"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/Common.sol": {
+			"keccak256": "0x048705ce1a855e18f5b2ddbdb860c84fa5d67840f3dcad055d93fd5ac97c57b1",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://fee7ddf26266b4ad9fe04086946933ef7fd32fb9351563f007532f7217a5a45c",
+				"dweb:/ipfs/Qmaosx5ioDb2DpzWCYLdh6XhE6rrNwaWCudSd7E7XeH1DK"
+			]
+		},
+		"scalable-dex/contracts/src/libraries/LibConstants.sol": {
+			"keccak256": "0x8bc90311d918be6e9e0440a0c9861e43abe5ff07de15aa57bba97e486dc1d18c",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://ab4a32633b04b94bc4a43c2f04d79d6785d709ecee05d082398b1328c4b50ea4",
+				"dweb:/ipfs/QmQbPYoVBRAVaA7CRU7mY5a7iMFb61EShxTYRR2RCUCFUK"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/components/Escapes.sol": {
+			"keccak256": "0xe9eff18edd30abdb07325d1743a104e0765ccbb127119f24918d74806ba05175",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://4e3a9523b22e8350f203f139f9f6caf8a427233d1673df8a0c2edc0d94690abf",
+				"dweb:/ipfs/QmQ654Jpb4Vce1EnG5ne8cNdiQDV8ap6aDk84Q2Lsu2cwX"
+			]
+		},
+		"scalable-dex/contracts/src/starkex/components/StarkExStorage.sol": {
+			"keccak256": "0xe4e9c6872a18c4b69d41c551e0986e06447d14dd4f37de40622f9d372df524ee",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://96d1ee14223218e3d605090c66edca9f558aeef4542267483e6e3f777ae65700",
+				"dweb:/ipfs/Qma1q17haAZkoAXNhjnNeisWCfDGn4BGxHvXTkcQQCmg76"
+			]
+		},
+		"scalable-dex/contracts/src/upgrade/ProxyStorage.sol": {
+			"keccak256": "0xe409a38c188a488384635187e06ca3e565346e39e3db7a864879110073ff0725",
+			"license": "Apache-2.0.",
+			"urls": [
+				"bzz-raw://28126e08e659ca388aa4230707f8558d0d7e9600cf02cad6fcd725f1562a3917",
+				"dweb:/ipfs/Qmd36xSnxFeG6AyQzgvksbTP3gTUw7fegWYVkS8UKLy1Tz"
+			]
+		}
+	},
+	"version": 1
+}

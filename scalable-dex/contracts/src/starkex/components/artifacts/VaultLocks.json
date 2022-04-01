@@ -1,0 +1,320 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"görli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"DEPOSIT_CANCEL_DELAY()": "77e84e0d",
+			"FREEZE_GRACE_PERIOD()": "00717542",
+			"MAX_FORCED_ACTIONS_REQS_PER_BLOCK()": "e30a5cff",
+			"MAX_VERIFIER_COUNT()": "e6de6282",
+			"STARKEX_MAX_DEFAULT_VAULT_LOCK()": "835a71c3",
+			"UNFREEZE_DELAY()": "993f3639",
+			"VERIFIER_REMOVAL_DELAY()": "b7663112",
+			"defaultVaultWithdrawalLock()": "a45d7841",
+			"getVaultWithdrawalLock(address,uint256,uint256)": "9de5c4e5",
+			"isVaultLocked(address,uint256,uint256)": "27c2b36d",
+			"lockVault(uint256,uint256,uint256)": "e8d28a9d",
+			"orderRegistryAddress()": "9c6a2837",
+			"setDefaultVaultWithdrawalLock(uint256)": "d4181dea"
+		}
+	},
+	"abi": [
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "newDefaultLockTime",
+					"type": "uint256"
+				}
+			],
+			"name": "LogDefaultVaultWithdrawalLockSet",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "ethKey",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "assetId",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "vaultId",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "timeRelease",
+					"type": "uint256"
+				}
+			],
+			"name": "LogVaultWithdrawalLockSet",
+			"type": "event"
+		},
+		{
+			"inputs": [],
+			"name": "DEPOSIT_CANCEL_DELAY",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "FREEZE_GRACE_PERIOD",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "MAX_FORCED_ACTIONS_REQS_PER_BLOCK",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "MAX_VERIFIER_COUNT",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "STARKEX_MAX_DEFAULT_VAULT_LOCK",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "UNFREEZE_DELAY",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "VERIFIER_REMOVAL_DELAY",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "defaultVaultWithdrawalLock",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "ethKey",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "assetId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "vaultId",
+					"type": "uint256"
+				}
+			],
+			"name": "getVaultWithdrawalLock",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "ethKey",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "assetId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "vaultId",
+					"type": "uint256"
+				}
+			],
+			"name": "isVaultLocked",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "assetId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "vaultId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "lockTime",
+					"type": "uint256"
+				}
+			],
+			"name": "lockVault",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "orderRegistryAddress",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "newDefaultTime",
+					"type": "uint256"
+				}
+			],
+			"name": "setDefaultVaultWithdrawalLock",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}
